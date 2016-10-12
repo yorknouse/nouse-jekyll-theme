@@ -14,7 +14,7 @@
   <body>
     <header>
       <div id="headerbar">
-        <a href="{{ "/" | prepend: baseurl }}" title="{{ site.title }}"><span>Nouse</span><h1>{{ site.title }}</h1></a>
+        <a href="{{ "/" | prepend: site.baseurl }}" title="{{ site.title }}"><span>Nouse</span><h1>{{ site.title }}</h1></a>
       </div>
       <nav id="primary-menu">
         <ul>
@@ -25,7 +25,7 @@
       </nav>
       <nav id="secondary-menu">
         <ul>
-          {% for article in site.pages %}{% if article.url contains page.url and page.level == "secondary" %}
+          {% for article in site.pages %}{% if article.url contains page.url and article.level == "secondary" %}
             <li><a href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">{{ article.title }}</a></li>
           {% endif %}{% endfor %}
         </ul>
