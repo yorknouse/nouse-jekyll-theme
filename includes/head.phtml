@@ -25,7 +25,7 @@
       </nav>
       <nav id="secondary-menu">
         <ul>
-          {% for article in site.pages %}{% if article.url contains page.url and article.url != page.url and page.level == "secondary" %}
+          {% for article in site.pages %}{% if article.url contains page.url and page.level == "secondary" %}
             <li><a href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">{{ article.title }}</a></li>
           {% endif %}{% endfor %}
         </ul>
