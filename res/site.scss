@@ -1,0 +1,87 @@
+$font-color: #000;
+$background-color: #FFF;
+$oob-color: #F1F1F1;
+$light-blue: rgb(59, 89, 152);
+$dark-blue: rgb(52, 78, 134);
+$low-blue: rgb(45, 67, 115);
+
+$width: 1008px;
+
+html, body {
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  font-family: Georgia,"Bitstream Charter",serif;
+  color: $font-color;
+  background-color: $oob-color;
+}
+
+header {
+  width: 100%;
+}
+
+#headerbar {
+  background-color: $background-color;
+  width: $width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#headerbar a {
+  background-image: url("{{ "/theme/res/nouse-logo.png" | prepend: site.baseurl }}");
+  background-repeat: no-repeat;
+  background-size: 287px 56px;
+  padding-left: 287px;
+  height: 56px;
+}
+
+#headerbar a span {
+  display: none;
+}
+
+#primary-menu {
+  background-color: $light-blue;
+  li:hover {
+    background-color: $dark-blue;
+  }
+}
+
+#secondary-menu {
+  background-color: $dark-blue;
+  li:hover {
+    background-color: $low-blue;
+  }
+}
+
+#primary-menu, #secondary-menu {
+  font-color: $background-color;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  ul {
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+    width: $width;
+    li {
+      padding: 8px 8px 8px 8px;
+      list-style-type: none;
+      display: inline-block;
+    }
+  }
+}
+
+.content {
+  width: $width;
+  background-color: $background-color;
+  margin: 0px auto 0px auto;
+}
+
+footer {
+  width: 100%;
+  background-color: $dark-blue;
+  color: $background-color;
+  margin: 0px 0px 0px 0px;
+  div {
+    width: $width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
