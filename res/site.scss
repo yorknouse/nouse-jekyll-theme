@@ -92,6 +92,12 @@ header {
   width: $width;
   background-color: $background-color;
   margin: 0px auto 0px auto;
+  :first-child {
+    margin-top: 0px;
+  }
+  :last-child {
+    margin-bottom: 0px;
+  }
 }
 
 footer {

@@ -19,14 +19,14 @@
       <nav id="primary-menu">
         <ul>
           {% for subpage in site.pages %}{% if subpage.level == "primary" %}
-            <li><a href="{{ subpage.url | prepend: baseurl }}" title="{{ subpage.title }}">{{ subpage.title }}</a></li>
+            <li><a href="{{ subpage.url | prepend: site.baseurl }}" title="{{ subpage.title }}">{{ subpage.title }}</a></li>
           {% endif %}{% endfor %}
         </ul>
       </nav>
       <nav id="secondary-menu">
         <ul>
           {% for article in site.pages %}{% if article.url contains page.url and article.url != page.url and page.level == "secondary" %}
-            <li><a href="{{ article.url | prepend: baseurl }}" title="{{ article.title }}">{{ article.title }}</a></li>
+            <li><a href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">{{ article.title }}</a></li>
           {% endif %}{% endfor %}
         </ul>
       </nav>
